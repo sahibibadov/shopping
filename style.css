@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f3f0;
+    padding: 5px 5px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+/* header */
+.container {
+    width: 1140px;
+    margin: 0px auto;
+}
+
+/* yuxari hisse dil, valyuta ve haqqinda */
+.top-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* sol dil ve valyuta */
+.language {
+    display: flex;
+    gap: 30px;
+    height: 5vh;
+
+}
+
+.language button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    color: #777777;
+    font-size: 13px;
+
+}
+
+.lan-dropmenu,
+.val-dropmenu {
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    text-align: left;
+    width: 110px;
+    padding: 5px 0px;
+    box-shadow: 0px 4px 10px rgba(37, 47, 63, 0.1);
+    border-radius: 4px;
+    background-color: #ffff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+
+.lan-dropmenu.active,
+.val-dropmenu.active {
+    visibility: visible;
+    opacity: 1;
+    top: 30px;
+}
+
+.lan-dropmenu li,
+.val-dropmenu li {
+    display: block;
+    margin: 5px 10px;
+    line-height: 1.7;
+    transition: 0.3s all ease;
+
+}
+
+.lan-dropmenu li a,
+.val-dropmenu li a {
+    display: block;
+    font-size: 14px;
+    padding: 3px 10px;
+    width: 100%;
+    transition: 0.3s all ease;
+
+}
+
+.lan-dropmenu li a:hover,
+.val-dropmenu li a:hover {
+    background-color: #ff497c;
+    color: #ffff;
+    border-radius: 5px;
+}
+
+
+/* rght about */
+.about-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.about-menu li a {
+    color: #777777;
+    transition: all 0.3s ease;
+    font-size: 13px;
+}
+
+.about-menu li a:hover {
+    color: #3577f0;
+}
+
+
+
+
+/* header navbar */
+.header-navbar {
+    /* position: sticky;
+    top: 30px; */
+    margin: 10px 0px;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 0 20px;
+    line-height: 1.7;
+    height: 80px;
+    z-index: 100;
+}
+
+.logo {
+    flex-basis: 15%;
+    line-height: 80px;
+}
+
+/* nav tag */
+.header-menu {
+    flex-basis: 70%;
+    height: 80px;
+    line-height: 80px;
+}
+
+/* orta menyu */
+
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+
+}
+
+.navbar-menu>li>a {
+    display: block;
+    height: 80px;
+    color: #000000;
+    position: relative;
+    font-weight: 600;
+}
+
+.navbar-menu>li>a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    top: 51px;
+    background-color: #000000;
+    left: 0px;
+    scale: 0;
+    transform-origin: left;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+
+.navbar-menu>li>a:hover::after,
+.navbar-menu>li>.active::after {
+    scale: 1;
+}
+
+
+
+.navbar-menu>li>a>i {
+    color: #c6c6c6;
+    vertical-align: middle;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+/* sunmenu */
+.submenu {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    top: 100%;
+    padding: 15px 10px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    line-height: 1.7;
+    background-color: #ffff;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(37, 47, 63, 0.1);
+    border-radius: 4px;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+/* submenu hover  */
+.navbar-menu>li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    top: 90%;
+    pointer-events: all;
+}
+
+.submenu>li>a {
+    position: relative;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #292930;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 4px;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+    /* overflow: hidden */
+}
+
+.submenu>li>a:hover,
+.submenu>li>.active-item {
+    color: #ff497c;
+}
+
+
+
+
+/* sag action hissesi */
+.action-head {
+    display: flex;
+    flex-basis: 15%;
+    line-height: 80px;
+}
+
+.action-menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-menu>li {
+    width: 100%;
+    position: relative;
+
+}
+
+.action-menu>li>a {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* a hover olanda cixan daire */
+.action-menu>li>a::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ff497c;
+    top: -9px;
+    left: -13px;
+    z-index: -1;
+    transition: all 0.3s ease;
+    scale: 0;
+
+}
+
+.action-menu>li>a:hover::before,
+.action-menu>li>a:hover {
+    scale: 1;
+    color: #ffff;
+}
+
+
+
+
+/* searcha klikde acilan backdrop */
+.serach-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: left;
+    scale: 0;
+    transition: all 0.2s;
+}
+
+.serach-modal.open {
+    opacity: 1;
+    visibility: visible;
+    scale: 1;
+}
+
+#search-close {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+}
+
+.search-box {
+    width: 800px;
+    height: 750px;
+    max-height: 90vh;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: auto;
+    background-color: #ffff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cart-count shopun usdundeki */
+.action-menu>li .cart-count {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffff;
+    line-height: 16px;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 23px;
+    border-radius: 50%;
+    border: 2px solid #ffff;
+    background-color: #3577f0;
+    z-index: 2;
+
+}
+
+/* card shopun acilan menyusu */
+/* backdrop menyu */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.backdrop.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.shop-cart-menu {
+    padding: 60px 50px;
+    width: 500px;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    right: -500px;
+    background-color: #ffff;
+
+    transition: all 0.3s ease;
+}
+
+.shop-cart-menu.open {
+    right: 0px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #F6F7fB;
+    padding-bottom: 18px;
+}
+
+.card-head h2 {
+    font-weight: 400;
+}
+
+.close-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #F6F7fB;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn i:hover {
+    background-color: #3577f0;
+    color: #ffff;
+}
+
+/* Shop menyu son */
+
+/* account dropmenyu */
+.account-dropmenu {
+    width: 250px;
+    position: absolute;
+    background-color: #ffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(37, 47, 63, 0.1);
+    right: 0;
+    top: 100px;
+    line-height: 1.7;
+    transition: all 0.3s ease;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.clik-account {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+.account-dropmenu span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #777777;
+}
+
+.account-dropmenu ul li a {
+    display: inline-block;
+    padding: 12px 0px;
+    width: 100%;
+    color: #27272E;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.account-dropmenu ul li a:hover {
+    color: #3577f0;
+}
+
+.account-dropmenu .login-box {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.account-dropmenu .login-box a {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: #ffff;
+    padding: 10px 35px;
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.account-dropmenu .login-box a::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #3577f0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.account-dropmenu .login-box a:hover::before {
+    transform: scale(1.1);
+}
+
+.registr-clikc {
+    font-size: 12px;
+    color: #777777;
+}
+
+.registr-clikc a {
+    color: #27272E;
+    border-bottom: 2px solid #999fae;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.registr-clikc a:hover {
+    color: #3577f0;
+    border-bottom-color: #3577f0;
+}
+
+/* header end */

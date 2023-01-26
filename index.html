@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping page</title>
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Titillium+Web:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <!-- yuxari menu -->
+            <div class="top-menu">
+                <!-- left laung -->
+                <div class="language">
+                    <button id="btn-1" type="button">English
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="lan-dropmenu">
+                            <li><a href="#">English</a> </li>
+                            <li><a href="#">Arabich</a> </li>
+                            <li><a href="#">Spanish</a> </li>
+                        </ul>
+                    </button>
+                    <button id="btn-2" type="button">USD
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="val-dropmenu">
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">AUD</a></li>
+                            <li><a href="#">EUR</a></li>
+                        </ul>
+                    </button>
+                </div>
+                <!-- right about -->
+                <div class="about">
+                    <ul class="about-menu">
+                        <li><a href="#">Help</a> </li>
+                        <li><a href="#">Join on</a> </li>
+                        <li><a href="#">Sign up</a> </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- header menyu hissesi -->
+            <div class="header-navbar">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="index.html"><img src="image/logo.png" alt="logo"></a>
+                </div>
+
+                <!-- orta menyu -->
+                <div class="header-menu">
+                    <!-- navtag -->
+                    <nav class="navbar">
+                        <!-- navbar hissesi -->
+                        <ul class="navbar-menu">
+                            <li>
+                                <a class="active" href="#">Home<i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a class="active-item" href="#">Home - Electronics</a></li>
+                                    <li><a href="#">Home - NFT</a></li>
+                                    <li><a href="#">Home - Fashion</a></li>
+                                    <li><a href="#">Home - Jewellery</a></li>
+                                    <li><a href="#">Home - Furniture</a></li>
+                                    <li><a href="#">Home - Multipurpose</a></li>
+                                    <li><a href="#">RTL Version</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Shop<i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a class="active-item" href="#">Shop With Sidebar</a></li>
+                                    <li><a href="#">Shop no Sidebar</a></li>
+                                    <li><a href="#">Product Variation 1</a></li>
+                                    <li><a href="#">Product Variation 2</a></li>
+                                    <li><a href="#">Product Variation 3</a></li>
+                                    <li><a href="#">Product Variation 4</a></li>
+                                    <li><a href="#">Product Variation 5</a></li>
+                                    <li><a href="#">Product Variation 6</a></li>
+                                    <li><a href="#">Product Variation 7</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Pages<i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a class="active-item" href="#">Wishlist</a></li>
+                                    <li><a href="#">Cart</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                    <li><a href="#">Account</a></li>
+                                    <li><a href="#">Sign Up</a></li>
+                                    <li><a href="#">Sign In</a></li>
+                                    <li><a href="#">Forgot Password</a></li>
+                                    <li><a href="#">Reset Password</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Coming Soon</a></li>
+                                    <li><a href="#">404 Error</a></li>
+                                    <li><a href="#">Typography</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">About</a></li>
+                            <li>
+                                <a href="#">Blog<i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a class="active-item" href="blog.html">Blog List</a></li>
+                                    <li><a href="#">Blog Grid</a></li>
+                                    <li><a href="#">Standard Post</a></li>
+                                    <li><a href="#">Gallery Post</a></li>
+                                    <li><a href="#">Video Post</a></li>
+                                    <li><a href="#">Audio Post</a></li>
+                                    <li><a href="#">Quote Post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- sag action butonlari-->
+                <div class="action-head">
+                    <ul class="action-menu">
+                        <li><a href="#"><i id="serach-icon" class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                        <li id="shopicon">
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <span class="cart-count">3</span>
+                        </li>
+                        <li class="user-li">
+                            <a href="#"><i class="fa-regular fa-user"></i></a>
+                            <div class="account-dropmenu">
+                                <span>QUICKLINKS</span>
+                                <ul>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Initiate return</a></li>
+                                    <li><a href="#">Support</a></li>
+                                    <li><a href="#">Language</a></li>
+                                </ul>
+                                <div class="login-box"><a class="login-btn" href="#">Login</a></div>
+                                <div class="registr-clikc">No account yet? <a href="#">REGISTER HERE</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!---container end-->
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- shop menyuya kliklendende acilan menyu -->
+    <div class="backdrop">
+        <!-- shop menyusu sagdan -->
+        <div class="shop-cart-menu">
+            <div class="card-head">
+                <h2>Cart review</h2>
+                <button id="shop-close" class="close-btn" type="button"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="card-body"></div>
+            <div class="card-footer"></div>
+        </div>
+
+        <!--seracha klikde acilan menyu  -->
+        <div class="serach-modal">
+            <button id="search-close" class="close-btn" type="button"><i class="fa-solid fa-xmark"></i></button>
+            <div class="search-box"></div>
+        </div>
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
