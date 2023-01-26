@@ -1,14 +1,3 @@
-/* bodye clikde baglanmaq */
-/* document.body.addEventListener('click', (event) => {
-    const elements = document.querySelectorAll('[data-popover-element].visible');
-    elements.forEach((el) => {
-        if (event.currentTarget.contains(el)) {
-            el.classList.remove('visible');
-        }
-    });
-}); */
-
-
 // dil ve valyuta butonlarinin aclimagi
 const dropbtn1 = document.getElementById('btn-1');
 const dropbtn2 = document.getElementById('btn-2');
@@ -26,18 +15,14 @@ dropbtn2.addEventListener('click', (e) => {
 
 
 
-// const btn2 = document.querySelector('.val-dropmenu.active');
 
-document.addEventListener('click', (event) => {
+// kenara klikde dil ve val menulerin baglanmasi
+document.body.addEventListener('click', (event) => {
 
     const btn1 = document.querySelector('.lan-dropmenu.active');
     const btn2 = document.querySelector('.val-dropmenu.active');
-    // const elem = document.querySelectorAll('.language > button')
-    // elem.forEach((el) => {
-    //     el
-    // })
+
     if (event.currentTarget.contains(btn1)) {
-        console.log(btn1);
         btn1.classList.remove('active');
     }
     if (event.currentTarget.contains(btn2)) {
@@ -65,8 +50,8 @@ const listener = backdrop.addEventListener('click', (e) => {
         searchModal.classList.remove('open');
 
         backdrop.removeEventListener('click', listener);
-    }
-})
+    };
+});
 
 
 
@@ -85,7 +70,7 @@ searchIcon.addEventListener('click', () => {
 closeSearch.addEventListener('click', () => {
     searchModal.classList.remove('open');
     backdrop.classList.remove('open');
-})
+});
 
 
 
@@ -99,7 +84,7 @@ shopIcon.addEventListener('click', () => {
     backdrop.classList.add('open');
     shopMenu.classList.add('open');
 
-})
+});
 closeBtn.addEventListener('click', () => {
     shopMenu.classList.remove('open');
     backdrop.classList.remove('open');
