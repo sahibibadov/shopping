@@ -295,6 +295,9 @@ img {
 .action-menu>li>a {
     font-size: 20px;
     position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     transition: all 0.3s ease;
 }
@@ -307,7 +310,7 @@ img {
     height: 45px;
     border-radius: 50%;
     background-color: #ff497c;
-    top: -9px;
+    top: -13px;
     left: -13px;
     z-index: -1;
     transition: all 0.3s ease;
@@ -576,9 +579,14 @@ img {
 
 /* title product */
 .product-title {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     color: #8c71db;
+
     font-size: 14px;
+}
+
+.product-title>p {
+    margin-bottom: 10px;
 }
 
 .product-title i {
@@ -604,6 +612,7 @@ img {
 .product-title h2 {
     color: #27272E;
     font-weight: 500;
+
     font-size: 36px;
 }
 
@@ -797,6 +806,7 @@ img {
 .product-content .prod-title {
     margin-bottom: 10px;
     color: #777777;
+    display: inline-block;
     font-weight: 500;
     transition: all 0.3s;
 }
@@ -816,4 +826,201 @@ img {
 .product-content .prod-price .old-price {
     color: #d6d6d6;
     text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+/* footer================================== */
+
+.foot-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #f6f7fb;
+}
+
+.footer-servis {
+    display: flex;
+    text-align: left;
+    padding: 0px 20px;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.footer-servis>div>img {
+    width: 45px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.footer-servis>div>h6 {
+    color: #292930;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.footer-servis>div>p {
+    color: #777777;
+}
+
+/* footer orta hisse */
+.foot-main {
+    padding: 50px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.footer-box {
+    padding: 0px 10px;
+    margin-bottom: 40px;
+
+}
+
+.footer-box h5 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #292930;
+}
+
+.footer-adress p {
+    color: #777777;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.footer-adress>ul>li>a {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #777777;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.footer-adress>ul>li>a:hover {
+    color: #27272E;
+}
+
+.footer-adress>ul>li>a>i {
+    margin-right: 10px;
+}
+
+
+.footer-box .after>ul>li>a::after,
+.footer-bottom .after>ul>li>a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: black;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s;
+
+}
+
+.footer-box .after>ul>li>a:hover::after,
+.footer-bottom .after>ul>li>a:hover::after {
+    width: 100%;
+    opacity: 1;
+    left: 0;
+}
+
+/* qr ve app linkleri */
+.qr-apps {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.qr-code {
+    margin-right: 20px;
+}
+
+.app-link a {
+    display: block;
+}
+
+.app-link a:first-child {
+    margin-bottom: 15px;
+}
+
+/* footer bottom */
+.footer-bottom {
+    padding: 15px 0px;
+    border-top: 3px solid #f6f7fb;
+    display: flex;
+    align-items: center;
+
+}
+
+.social-apps {
+    flex: auto;
+    text-align: left;
+
+}
+
+.social-apps a {
+    display: inline-block;
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 14px;
+    height: 16px;
+    font-size: 16px;
+    color: #777777;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.social-apps a::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff497c;
+    top: -7px;
+    left: -7px;
+    z-index: -1;
+    transition: all 0.3s ease;
+    scale: 0;
+}
+
+.social-apps a:hover::after,
+.social-apps a:hover {
+    scale: 1;
+    color: #ffff;
+}
+
+.center-adress {
+    flex: auto;
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+
+}
+
+.center-adress>ul>li>a {
+    margin-left: 5px;
+}
+
+.cards-img {
+    font-size: 14px;
+    color: #777777;
+    flex: auto;
+    text-align: end;
+}
+
+.cards-img img {
+    margin-left: 10px;
+
 }
